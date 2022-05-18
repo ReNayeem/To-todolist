@@ -3,11 +3,12 @@ import './Login.css'
 import { Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
-import { Link } from 'react-router-dom';
-import Loading from '../Loading/Loading';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { async } from '@firebase/util';
 import { sendPasswordResetEmail } from 'firebase/auth';
-import toast from 'react-hot-toast';
+import SocialLogin from '../SocialLogin/SocialLogin';
+import Loading from '../Shared/Loading/Loading';
+
 
 const Login = () => {
 
@@ -17,12 +18,23 @@ const Login = () => {
 
     const emailRef = useRef('');
 
+    const passwordRef = useRef('');
+
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
-    let errorElement;
+    const navigate = useNavigate();
 
-    if (loading || gLoading) {
+    const location = useLocation();
+
+    let errorElement;
+    let from = location.state?.from?.pathname || "/";
+
+    if (loading || gLoading || sending) {
         return <Loading></Loading>
+    }
+
+    if (user || gUser) {
+        navigate(from, { replace: true });
     }
 
     if (error || gError) {
@@ -33,40 +45,42 @@ const Login = () => {
         const email = emailRef.current.value;
         if (email) {
             await sendPasswordResetEmail(email);
-            toast.success('Reset password email sent');
+            alert('Email sent successful')
         }
         else {
-            toast.error('Please enter your email address');
+            alert('Please enter your email!')
         }
     }
 
     const handleSubmit = async event => {
         event.preventDefault();
-        const email = event.target.email.value;
-        const password = event.target.password.value;
+        const email = emailRef.current.value;
+        const password = passwordRef.current.value;
+
         await signInWithEmailAndPassword(email, password);
     }
 
 
     return (
         <div className='custom-container login'>
+            <div className='d-flex form-text'>
+                <h5 className='h5-text mb-3'>login</h5>
+                <button onClick={resetPassword} className='p-text mb-3'>Reset password?</button>
+            </div>
             <Form onSubmit={handleSubmit} className='d-flex form-container flex-column'>
-                <div className='d-flex form-title align-items-center justify-content-between'>
-                    <h5 className='h5-text mb-3'>login</h5>
-                    <button onClick={resetPassword} className='p-text mb-3'>Reset password?</button>
-                </div>
+
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Control ref={emailRef} name='email' className='form-input' type="email" placeholder="email" />
                 </Form.Group>
 
                 <Form.Group controlId="formBasicPassword">
-                    <Form.Control name='password' type="password" className='form-input' placeholder="password" />
+                    <Form.Control ref={passwordRef} name='password' type="password" className='form-input' placeholder="password" />
                 </Form.Group>
                 <hr />
                 {errorElement}
                 <button className='custom-button' type="submit">Sign In</button>
                 <p className='text-center my-1'><small>or</small></p>
-                <button onClick={() => signInWithGoogle()} className='custom-button' type="submit">Google Sign In</button>
+                <SocialLogin></SocialLogin>
             </Form>
             <p className='mt-4 text-center'><small>New to To-TodoList<br />please <Link className='text-decoration-none nav-title' as={Link} to="/register">register</Link></small></p>
         </div>

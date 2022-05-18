@@ -14,10 +14,16 @@
 .h5-text {
     font-size: 1rem;
     color: #d1d0c5 !important;
+    margin-left: .7rem;
 }
 
 .form-container {
-    max-width: 240px;
+    max-width: 240px !important;
+}
+
+.form-text {
+    justify-content: space-between !important;
+    min-width: 240px !important;
 }
 
 .form-input {
