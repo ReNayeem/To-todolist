@@ -1,0 +1,11 @@
+.footer {
+    position: sticky;
+    top: 100%;
+}
+
+.footer-text {
+    font-size: .80rem;
+    line-height: 1rem;
+    padding-bottom: 1rem;
+    color: #5a5b5f !important;
+}

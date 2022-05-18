@@ -1,0 +1,56 @@
+.login {
+    display: flex;
+    flex-direction: column;
+}
+
+.p-text {
+    color: #5e6164 !important;
+    font-size: .75rem;
+    line-height: .75rem;
+    border: none;
+    letter-spacing: 0.06rem;
+}
+
+.h5-text {
+    font-size: 1rem;
+    color: #d1d0c5 !important;
+}
+
+.form-container {
+    max-width: 240px;
+}
+
+.form-input {
+    background-color: #2c2e31;
+    border: none;
+    color: #d1d0c5;
+}
+
+.form-input:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: none;
+    background-color: #2c2e31;
+}
+
+::placeholder {
+    color: #585a5d !important;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #585a5d !important;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #585a5d !important;
+}
+
+.check-box {
+    color: #d1d0c5 !important;
+    font-size: 1rem;
+    border: none !important;
+}

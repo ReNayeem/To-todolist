@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+.navbar {
+    background-color: #323437 !important;
+    box-shadow: 5px 10px 8px #8888880e;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.navbar-link {
+    text-align: center;
+}
+
+.brand-name {
+    font-size: 1.8rem;
+}
+
+.brand-image {
+    width: 2.3rem;
+    margin-bottom: .2rem;
+}
+
+.nav-title {
+    color: #5e6164 !important;
+    transition: color .5s;
+}
+
+.nav-title:hover {
+    color: #d1d0c5 !important;
+}
+
+.logout-button:hover {
+    color: darkolivegreen;
+}

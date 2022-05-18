@@ -1,0 +1,10 @@
+npm install firebase
+npm install react-router-dom@6
+npm install react-bootstrap bootstrap
+npm install --save react-firebase-hooks
+npm install --save react-toastify
+npm i react-helmet-async
+npm install react-hook-form
+npm install react-hot-toast
+ 
+npm i firebase react-router-dom@6 react-bootstrap bootstrap --save react-firebase-hooks --save react-toastify react-helmet-async react-hook-form react-hot-toast
