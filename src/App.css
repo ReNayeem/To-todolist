@@ -78,7 +78,7 @@ p {
 /* custom firefox scrollbar start */
 html {
   scrollbar-width: normal;
-  scrollbar-color: #00a149 rgb(231, 231, 231);
+  scrollbar-color: #e2b714 rgb(231, 231, 231);
 }
 
 /* custom firefox scrollbar end */
@@ -89,7 +89,7 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-thumb {
-  background-color: #00a149;
+  background-color: #e2b714;
 }
 
 

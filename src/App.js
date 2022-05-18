@@ -8,7 +8,7 @@ import MyList from './Pages/MyList/MyList';
 import Register from './Pages/Register/Register';
 import Footer from './Pages/Shared/Footer/Footer';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
-import { ToastContainer } from 'react-toastify';
+import NotFound from './Pages/Shared/NotFound/NotFound';
 
 function App() {
   return (
@@ -28,9 +28,9 @@ function App() {
             <MyList></MyList>
           </RequireAuth>
         }></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
-      <ToastContainer></ToastContainer>
     </div>
   );
 }
