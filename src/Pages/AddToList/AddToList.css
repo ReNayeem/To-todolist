@@ -1,0 +1,12 @@
+.textarea-input {
+    border: none;
+    background-color: #2c2e31;
+    border-radius: .25rem;
+    padding: .5rem;
+}
+
+.textarea-input:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: none;
+}

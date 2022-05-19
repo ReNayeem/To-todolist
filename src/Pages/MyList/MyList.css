@@ -1,0 +1,51 @@
+.manage-task-table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: start;
+}
+
+.manage-task-table h5 {
+    font-size: 16px;
+    color: rgb(63, 63, 63);
+}
+
+.manage-task-table td,
+.manage-task-table th {
+    border: 1px solid #d1d0c5;
+    padding: .5rem 1rem;
+}
+
+.manage-task-table tr {
+    transition: background-color .5s;
+}
+
+.manage-task-table tr:hover {
+    background-color: #ddd;
+}
+
+.manage-task-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #c99d3f;
+    color: #2c2e31 !important;
+}
+
+.remove-button {
+    background-color: rgb(153, 33, 33);
+    color: #d1d0c5;
+    padding: 0rem 1rem;
+    border: none;
+    transition: background-color 1s, color .5s;
+}
+
+.remove-button:hover {
+    background-color: #ffbf30;
+    color: #2c2e31 !important;
+}
+
+@media only screen and (min-width: 1000px) {
+    .custom-table-container {
+        max-width: 936px;
+    }
+}

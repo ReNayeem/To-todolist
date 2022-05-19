@@ -17,6 +17,7 @@ function App() {
       <Routes>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/addToList' element={
           <RequireAuth>
             <AddToList></AddToList>

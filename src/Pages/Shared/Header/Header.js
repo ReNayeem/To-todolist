@@ -18,7 +18,7 @@ const Header = () => {
 
     return (
         <>
-            <Navbar bg="dark" expand="lg">
+            <Navbar className='navbar' sticky='top' expand="lg">
                 <Container>
                     <Navbar.Brand className='brand-name' as={Link} to="/"><img className='brand-image' src={logo} alt="" />  To-TodoList</Navbar.Brand>
 
@@ -39,7 +39,7 @@ const Header = () => {
                                 </>
                             }
                             {
-                                user ? <button className='border-0' onClick={handleSignOut}>Sign out</button> :
+                                user ? <button className='border-0 p-2' onClick={handleSignOut}>Sign out</button> :
                                     <Nav.Link className='nav-title' as={Link} to="login">
                                         Login
                                     </Nav.Link>
@@ -48,6 +48,7 @@ const Header = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+
         </>
     );
 };
