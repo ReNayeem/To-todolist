@@ -1,0 +1,102 @@
+[debug] [2022-06-13T12:20:24.988Z] ----------------------------------------------------------------------
+[debug] [2022-06-13T12:20:24.990Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\nayea\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-06-13T12:20:24.990Z] CLI Version:   10.8.0
+[debug] [2022-06-13T12:20:24.990Z] Platform:      win32
+[debug] [2022-06-13T12:20:24.990Z] Node Version:  v16.6.2
+[debug] [2022-06-13T12:20:24.991Z] Time:          Mon Jun 13 2022 18:20:24 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-06-13T12:20:24.992Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-06-13T12:20:25.070Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-06-13T12:20:25.070Z] > authorizing via signed-in user (renayeem@gmail.com)
+[debug] [2022-06-13T12:20:25.070Z] [iam] checking project to-todolist for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-06-13T12:20:25.072Z] > refreshing access token with scopes: []
+[debug] [2022-06-13T12:20:25.072Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-06-13T12:20:25.269Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Mon, 13 Jun 2022 12:20:22 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-06-13T12:20:25.279Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-todolist:testIamPermissions [none]
+[debug] [2022-06-13T12:20:25.279Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-todolist:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-06-13T12:20:26.550Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-todolist:testIamPermissions 200
+[debug] [2022-06-13T12:20:26.550Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-todolist:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-06-13T12:20:26.551Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/to-todolist [none]
+[debug] [2022-06-13T12:20:27.054Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/to-todolist 200
+[debug] [2022-06-13T12:20:27.054Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/to-todolist {"projectId":"to-todolist","projectNumber":"856405204972","displayName":"To-todolist","name":"projects/to-todolist","resources":{"hostingSite":"to-todolist"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'to-todolist'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-06-13T12:20:27.058Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/to-todolist [none]
+[debug] [2022-06-13T12:20:27.503Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/to-todolist 200
+[debug] [2022-06-13T12:20:27.503Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/to-todolist {"projectId":"to-todolist","projectNumber":"856405204972","displayName":"To-todolist","name":"projects/to-todolist","resources":{"hostingSite":"to-todolist"},"state":"ACTIVE"}
+[debug] [2022-06-13T12:20:27.505Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/856405204972/sites/to-todolist/versions [none]
+[debug] [2022-06-13T12:20:27.506Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/856405204972/sites/to-todolist/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-06-13T12:20:29.316Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/856405204972/sites/to-todolist/versions 200
+[debug] [2022-06-13T12:20:29.316Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/856405204972/sites/to-todolist/versions {"name":"projects/856405204972/sites/to-todolist/versions/dabaade0316baffe","status":"CREATED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[to-todolist]: beginning deploy... 
+[info] i  hosting[to-todolist]: found 16 files in build 
+[debug] [2022-06-13T12:20:29.326Z] [hosting] uploading with 200 concurrency
+[debug] [2022-06-13T12:20:29.501Z] [hosting] hash cache [YnVpbGQ] stored for 16 files
+[debug] [2022-06-13T12:20:29.501Z] [hosting][hash queue][FINAL] {"max":165,"min":2,"avg":15.9375,"active":0,"complete":16,"success":16,"errored":0,"retried":0,"total":16,"elapsed":173}
+[debug] [2022-06-13T12:20:29.502Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/856405204972/sites/to-todolist/versions/dabaade0316baffe:populateFiles [none]
+[debug] [2022-06-13T12:20:29.502Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/856405204972/sites/to-todolist/versions/dabaade0316baffe:populateFiles {"files":{"/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/logo.png":"b36124b3bde77f6a9fac0a94f1da84c853c63a8a444a2438ae30db463be1d508","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/asset-manifest.json":"3859330979f22b2e00722c16efa3e54d5c9dc905288ea3eccbd81ba041db23b8","/index.html":"bca50e72f0166498314820b648e4539abc77dd5cae7f62ec1dcd949675cc4720","/static/css/main.dbebab93.css":"2a4dc0b376f861c809ce3b8cf54ac40f58bb9297d1ec7115baf3bcd05d8a2e53","/static/js/787.b701888c.chunk.js":"83253890c937b221903904623596f935450e113b38e81e42c9eee685afb4cd50","/static/css/main.dbebab93.css.map":"ad892c110c1c3988a9e34416e035165d5f8335b93b3f5f79f3c627f0235a11e2","/static/js/main.54f40b17.js.LICENSE.txt":"980850d0c97fc4da1718320dcc140b4bafb239b14275f3a5d9640098e064ab8a","/static/js/787.b701888c.chunk.js.map":"583f8bb1505541735687b0fb71871630c71de41d7f456c0acb9657d9ffecf747","/static/media/logo.95c71d8b332c6c93b77f.png":"b36124b3bde77f6a9fac0a94f1da84c853c63a8a444a2438ae30db463be1d508","/static/js/main.54f40b17.js":"d4658575edeb2776fbd070bf050a30f89fb3cb8e65ae090a4209b644598c9642","/static/js/main.54f40b17.js.map":"6bcbd49fa7355d40ab3ecbd452308307d0d00cde7c503529a389310ab2dabd96"}}
+[debug] [2022-06-13T12:20:31.014Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/856405204972/sites/to-todolist/versions/dabaade0316baffe:populateFiles 200
+[debug] [2022-06-13T12:20:31.014Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/856405204972/sites/to-todolist/versions/dabaade0316baffe:populateFiles {"uploadRequiredHashes":["3859330979f22b2e00722c16efa3e54d5c9dc905288ea3eccbd81ba041db23b8","6bcbd49fa7355d40ab3ecbd452308307d0d00cde7c503529a389310ab2dabd96","bca50e72f0166498314820b648e4539abc77dd5cae7f62ec1dcd949675cc4720","ad892c110c1c3988a9e34416e035165d5f8335b93b3f5f79f3c627f0235a11e2","d4658575edeb2776fbd070bf050a30f89fb3cb8e65ae090a4209b644598c9642","2a4dc0b376f861c809ce3b8cf54ac40f58bb9297d1ec7115baf3bcd05d8a2e53"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/to-todolist/versions/dabaade0316baffe/files"}
+[debug] [2022-06-13T12:20:31.016Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/to-todolist/versions/dabaade0316baffe/files/3859330979f22b2e00722c16efa3e54d5c9dc905288ea3eccbd81ba041db23b8 [none]
+[debug] [2022-06-13T12:20:31.016Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/to-todolist/versions/dabaade0316baffe/files/3859330979f22b2e00722c16efa3e54d5c9dc905288ea3eccbd81ba041db23b8 [stream]
+[debug] [2022-06-13T12:20:31.017Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/to-todolist/versions/dabaade0316baffe/files/6bcbd49fa7355d40ab3ecbd452308307d0d00cde7c503529a389310ab2dabd96 [none]
+[debug] [2022-06-13T12:20:31.018Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/to-todolist/versions/dabaade0316baffe/files/6bcbd49fa7355d40ab3ecbd452308307d0d00cde7c503529a389310ab2dabd96 [stream]
+[debug] [2022-06-13T12:20:31.019Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/to-todolist/versions/dabaade0316baffe/files/bca50e72f0166498314820b648e4539abc77dd5cae7f62ec1dcd949675cc4720 [none]
+[debug] [2022-06-13T12:20:31.019Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/to-todolist/versions/dabaade0316baffe/files/bca50e72f0166498314820b648e4539abc77dd5cae7f62ec1dcd949675cc4720 [stream]
+[debug] [2022-06-13T12:20:31.020Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/to-todolist/versions/dabaade0316baffe/files/ad892c110c1c3988a9e34416e035165d5f8335b93b3f5f79f3c627f0235a11e2 [none]
+[debug] [2022-06-13T12:20:31.020Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/to-todolist/versions/dabaade0316baffe/files/ad892c110c1c3988a9e34416e035165d5f8335b93b3f5f79f3c627f0235a11e2 [stream]
+[debug] [2022-06-13T12:20:31.020Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/to-todolist/versions/dabaade0316baffe/files/d4658575edeb2776fbd070bf050a30f89fb3cb8e65ae090a4209b644598c9642 [none]
+[debug] [2022-06-13T12:20:31.021Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/to-todolist/versions/dabaade0316baffe/files/d4658575edeb2776fbd070bf050a30f89fb3cb8e65ae090a4209b644598c9642 [stream]
+[debug] [2022-06-13T12:20:31.021Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/to-todolist/versions/dabaade0316baffe/files/2a4dc0b376f861c809ce3b8cf54ac40f58bb9297d1ec7115baf3bcd05d8a2e53 [none]
+[debug] [2022-06-13T12:20:31.021Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/to-todolist/versions/dabaade0316baffe/files/2a4dc0b376f861c809ce3b8cf54ac40f58bb9297d1ec7115baf3bcd05d8a2e53 [stream]
+[debug] [2022-06-13T12:20:31.022Z] [hosting][populate queue][FINAL] {"max":1519,"min":1519,"avg":1519,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1525}
+[debug] [2022-06-13T12:20:31.023Z] [hosting] uploads queued: 6
+[debug] [2022-06-13T12:20:32.684Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/to-todolist/versions/dabaade0316baffe/files/bca50e72f0166498314820b648e4539abc77dd5cae7f62ec1dcd949675cc4720 200
+[debug] [2022-06-13T12:20:32.684Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/to-todolist/versions/dabaade0316baffe/files/bca50e72f0166498314820b648e4539abc77dd5cae7f62ec1dcd949675cc4720 [stream]
+[debug] [2022-06-13T12:20:32.685Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/to-todolist/versions/dabaade0316baffe/files/ad892c110c1c3988a9e34416e035165d5f8335b93b3f5f79f3c627f0235a11e2 200
+[debug] [2022-06-13T12:20:32.686Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/to-todolist/versions/dabaade0316baffe/files/ad892c110c1c3988a9e34416e035165d5f8335b93b3f5f79f3c627f0235a11e2 [stream]
+[debug] [2022-06-13T12:20:32.696Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/to-todolist/versions/dabaade0316baffe/files/3859330979f22b2e00722c16efa3e54d5c9dc905288ea3eccbd81ba041db23b8 200
+[debug] [2022-06-13T12:20:32.696Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/to-todolist/versions/dabaade0316baffe/files/3859330979f22b2e00722c16efa3e54d5c9dc905288ea3eccbd81ba041db23b8 [stream]
+[debug] [2022-06-13T12:20:32.933Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/to-todolist/versions/dabaade0316baffe/files/d4658575edeb2776fbd070bf050a30f89fb3cb8e65ae090a4209b644598c9642 200
+[debug] [2022-06-13T12:20:32.933Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/to-todolist/versions/dabaade0316baffe/files/d4658575edeb2776fbd070bf050a30f89fb3cb8e65ae090a4209b644598c9642 [stream]
+[debug] [2022-06-13T12:20:33.775Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/to-todolist/versions/dabaade0316baffe/files/2a4dc0b376f861c809ce3b8cf54ac40f58bb9297d1ec7115baf3bcd05d8a2e53 200
+[debug] [2022-06-13T12:20:33.775Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/to-todolist/versions/dabaade0316baffe/files/2a4dc0b376f861c809ce3b8cf54ac40f58bb9297d1ec7115baf3bcd05d8a2e53 [stream]
+[debug] [2022-06-13T12:20:34.255Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/to-todolist/versions/dabaade0316baffe/files/6bcbd49fa7355d40ab3ecbd452308307d0d00cde7c503529a389310ab2dabd96 200
+[debug] [2022-06-13T12:20:34.256Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/to-todolist/versions/dabaade0316baffe/files/6bcbd49fa7355d40ab3ecbd452308307d0d00cde7c503529a389310ab2dabd96 [stream]
+[debug] [2022-06-13T12:20:34.256Z] [hosting][upload queue][FINAL] {"max":3241,"min":1669,"avg":2156.8333333333335,"active":0,"complete":6,"success":6,"errored":0,"retried":0,"total":6,"elapsed":3242}
+[info] +  hosting[to-todolist]: file upload complete 
+[debug] [2022-06-13T12:20:34.257Z] [hosting] deploy completed after 4940ms
+[debug] [2022-06-13T12:20:34.259Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "to-todolist"
+    },
+    "site": "to-todolist",
+    "version": "projects/856405204972/sites/to-todolist/versions/dabaade0316baffe"
+  }
+]
+[info] i  hosting[to-todolist]: finalizing version... 
+[debug] [2022-06-13T12:20:34.261Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/856405204972/sites/to-todolist/versions/dabaade0316baffe updateMask=status%2Cconfig
+[debug] [2022-06-13T12:20:34.261Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/856405204972/sites/to-todolist/versions/dabaade0316baffe {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2022-06-13T12:20:35.635Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/856405204972/sites/to-todolist/versions/dabaade0316baffe 200
+[debug] [2022-06-13T12:20:35.635Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/856405204972/sites/to-todolist/versions/dabaade0316baffe {"name":"projects/856405204972/sites/to-todolist/versions/dabaade0316baffe","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-06-13T12:20:26.254376Z","createUser":{"email":"renayeem@gmail.com"},"finalizeTime":"2022-06-13T12:20:32.854776Z","finalizeUser":{"email":"renayeem@gmail.com"}}
+[debug] [2022-06-13T12:20:35.635Z] [hosting] finalized version for to-todolist:[object Object]
+[info] +  hosting[to-todolist]: version finalized 
+[info] i  hosting[to-todolist]: releasing new version... 
+[debug] [2022-06-13T12:20:35.637Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/856405204972/sites/to-todolist/releases versionName=projects%2F856405204972%2Fsites%2Fto-todolist%2Fversions%2Fdabaade0316baffe
+[debug] [2022-06-13T12:20:35.637Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/856405204972/sites/to-todolist/releases {"message":null}
