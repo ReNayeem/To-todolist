@@ -34,32 +34,38 @@ const MyList = () => {
     }
     return (
         <div className='my-5'>
-            <p className='p-text text-center'>Your</p>
-            <h1 className='h1-text text-center mb-4'>To Do List</h1>
-            <PageTitle title="My List"></PageTitle>
-
-
-            <table className='manage-task-table custom-table-container mx-auto'>
-                <tr>
-                    <th className='w-25'>Name</th>
-                    <th className='w-50'>Description</th>
-                    <th className='w-25 text-center'>Remove</th>
-                </tr>
-            </table>
             {
-                getUser.length === 0 ? (<Loading></Loading>) : ''
-            }
+                getUser.length === 0 ? <p className='p-text do-not-have text-center'>You don't have any task</p> : <div>
+                    <p className='p-text text-center'>Your</p>
+                    <h1 className='h1-text text-center mb-4'>To Do List</h1>
+                    <PageTitle title="My List"></PageTitle>
 
-            {
-                getUser?.map(usersTask =>
+
                     <table className='manage-task-table custom-table-container mx-auto'>
                         <tr>
-                            <td className='w-25'><h5>{usersTask.name}</h5></td>
-                            <td className='w-50'><h5>{usersTask.description}</h5></td>
-                            <td className='w-25 text-center'><button className='remove-button' onClick={() => handleDelete(usersTask._id)}>X</button></td>
+                            <th className='w-25'>Name</th>
+                            <th className='w-50'>Description</th>
+                            <th className='w-25 text-center'>Remove</th>
                         </tr>
-                    </table>)
+                    </table>
+
+                    {
+                        getUser.length === 0 ? (<Loading></Loading>) : ''
+                    }
+
+                    {
+                        getUser?.map(usersTask =>
+                            <table className='manage-task-table custom-table-container mx-auto'>
+                                <tr>
+                                    <td className='w-25'><h5>{usersTask.name}</h5></td>
+                                    <td className='w-50'><h5>{usersTask.description}</h5></td>
+                                    <td className='w-25 text-center'><button className='remove-button' onClick={() => handleDelete(usersTask._id)}>X</button></td>
+                                </tr>
+                            </table>)
+                    }
+                </div>
             }
+
         </div>
     );
 };

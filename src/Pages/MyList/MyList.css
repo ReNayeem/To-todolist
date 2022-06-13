@@ -44,6 +44,13 @@
     color: #2c2e31 !important;
 }
 
+.do-not-have {
+    min-height: calc(100vh - 200.23px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media only screen and (min-width: 1000px) {
     .custom-table-container {
         max-width: 936px;
