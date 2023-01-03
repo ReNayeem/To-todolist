@@ -14,7 +14,7 @@ const AddToList = () => {
             name: event.target.name.value,
             description: event.target.description.value,
         }
-        const url = 'https://to-todolist.herokuapp.com/tasks';
+        const url = 'https://to-todolist-server.vercel.app/tasks';
         fetch(url, {
             method: 'POST',
             headers: {
