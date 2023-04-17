@@ -10,7 +10,7 @@ const MyList = () => {
     const [getUser, setGetUser] = useState([]);
     useEffect(() => {
         if (user) {
-            fetch(`https://to-todolist-server.up.railway.app/task?email=${user.email}`)
+            fetch(`https://to-todolist-server.onrender.com/task?email=${user.email}`)
                 .then(res => res.json())
                 .then(data => setGetUser(data))
         }
@@ -21,7 +21,7 @@ const MyList = () => {
     const handleDelete = id => {
         const proceed = window.confirm("Please select 'OK' for delete.");
         if (proceed) {
-            const url = `https://to-todolist-server.up.railway.app/tasks/${id}`;
+            const url = `https://to-todolist-server.onrender.com/tasks/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

@@ -14,7 +14,7 @@ const AddToList = () => {
             name: event.target.name.value,
             description: event.target.description.value,
         }
-        const url = 'https://to-todolist-server.up.railway.app/tasks';
+        const url = 'https://to-todolist-server.onrender.com/tasks';
         fetch(url, {
             method: 'POST',
             headers: {
